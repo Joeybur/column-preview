@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75); /*paragraphs*/
+    --Very-light-gray: hsl(0, 0%, 95%); /*background, headings, buttons*/
+}
+
+body {
+
+    font-family: 'Lexend Deca', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--Very-light-gray);
+
+}
+
+h1 {
+    font-weight: 700;
+    font-family: 'Big Shoulders Display', cursive;
+    color: var(--Very-light-gray);
+    text-transform: uppercase;
+}
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 57.5rem;
+    height: 30rem;
+}
+
+.card{
+    height: 100%;
+    padding: 3rem;
+}
+
+.card-sedang{
+    background: var(--Bright-orange);
+    border-top-left-radius: 0.7rem;
+    border-bottom-left-radius: 0.7rem;
+}
+
+.card-suvs{
+    background: var(--Dark-cyan);
+}
+
+.card-luxury{
+    background: var(--Very-dark-cyan);
+    border-top-right-radius: 0.7rem;
+    border-bottom-right-radius: 0.7rem;
+}
+
+.card h1{
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+.card p{
+    color: var(--Transparent-white);
+    font-weight: 400;
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+    padding-bottom: 5rem;
+}
+
+.card .btn{
+    width: 70%;
+    padding: 0.8rem 0 0.8rem 0;
+    border-radius: 2rem;
+    border-style: none;
+}
+
+.btn1{
+    color: var(--Bright-orange);
+}
+
+.btn2{
+    color: var(--Dark-cyan);
+}
+
+.btn3{
+    color: var(--Very-dark-cyan);
+}
+
+.btn:hover{
+    background: transparent;
+    color: var(--Transparent-white);
+    cursor: pointer;
+    outline: 1px solid white;
+    transition: 0.3s ease;
+}
+
+@media (max-width: 45rem) {
+    .card-container{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+        margin: 5rem 0;
+    }
+
+    .card .btn{
+        width: 50%;
+    }
+}
